@@ -31,6 +31,7 @@ body {
   font-weight: 600;
   line-height: 1.4em;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 /* Estilos de texto*/
@@ -88,6 +89,7 @@ div[class^="section"] {
   justify-items: center;
   align-items: center;
   text-align: center;
+  width: 100vw;
 }
 
 .section_00.hero_section {
@@ -358,4 +360,93 @@ footer .galery  {
 
 .attribution a {
   color: hsl(168deg 45% 74%)
+}
+
+@media screen and (min-width: 450px) {
+  .section_00 {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: url(../images/desktop/image-header.jpg) #3fbefc no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: black;
+    font-size: 4vw;
+    line-height: 1em;
+  }
+
+  div[class^="section"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    /* grid-gap: 10px; */
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Brand */
+  .section_01 > .image_01 {
+    width: 50vw;
+    height: 50vw;
+    background: url(../images/desktop/image-transform.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4 ;
+  }
+  .section_01 > .title {
+    padding: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2 ;
+    align-self: flex-end;
+  }
+
+  .section_01 > .text {
+    padding: 30px 0;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3 ;
+  }
+
+  .section_01 > .cta {
+    padding: 0;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4 ;
+    align-self: flex-start;
+  }
+
+  /* Brand */
+  .section_02 > .image_02 {
+    width: 50vw;
+    height: 50vw;
+    background: url(../images/desktop/image-stand-out.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4 ;
+  }
+
+  .section_02 > .title {
+    padding: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2 ;
+    align-self: flex-end;
+  }
+
+  .section_02 > .text {
+    padding: 30px 0;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3 ;
+  }
+
+  .section_02 > .cta {
+    padding: 0;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4 ;
+    align-self: flex-start;
+  }
 }
