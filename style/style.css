@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  /* graphic design text */
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  /* photography text */
+  --dark-blue: hsl(198, 62%, 26%);
+  /* footer */
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --blue-nav: hsl(200, 97%, 62%);
+
+  --dark-blue: hsl(212, 27%, 19%);
+  --dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: 62.5% ; position: relative; */
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  line-height: 1.4em;
+  font-size: 18px;
+}
+
+/* Estilos de texto*/
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  color: black;
+  font-size: 8vw;
+  line-height: 1em;
+}
+p {
+  color: #8b8994;
+  padding-bottom: 20px;
+}
+p:last-of-type {
+  padding: 0;
+}
+
+
+
+
+/* Nav */
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: var(--blue-nav);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  z-index: 3;
+}
+nav h1 {
+  display: block;
+  height: 20px;
+  width: 102px;
+  background: url(../images/logo.svg) no-repeat;
+  background-position: center center;
+  background-size: contain;
+  text-indent: -1000%;
+}
+nav ul {
+  display: none;
+}
+
+/* :not(.hero_section) */
+/* grid */
+div[class^="section"] {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3 , auto);
+  /* grid-gap: 10px; */
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.section_00.hero_section {
+  align-items: flex-start;
+}
+
+.hero, .title, .text, .cta {
+  width: 80%;
+}
+
+.title {
+  padding: 50px 0 30px 0;
+}
+
+.text {
+  padding-bottom: 36px;
+}
+
+.cta {
+  padding-bottom: 56px; 
+}
+
+/* hero */
+.section_00 {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: url(../images/mobile/image-header.jpg) #3fbefc no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+.hero {
+  grid-row: 2 / 3;
+}
+
+.hero h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 11.5vw;
+  letter-spacing: 0.5vw;
+}
+
+/* Transform your brand */ 
+.section_01 > .image_01 {
+  width: 100%;
+  height: 100vw;
+  background: url(../images/mobile/image-transform.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Audience */ 
+.section_02 > .image_02 {
+  width: 100%;
+  height: 100vw;
+  background: url(../images/mobile/image-stand-out.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*serviços */
+.section_03 {
+  display: flex;
+}
+div[class^="service_design"] {
+  width: 100%;
+  height: 100vh;
+  padding: 50vh 0 40px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+.service_design_graphic {
+  background: url(../images/mobile/image-graphic-design.jpg) no-repeat;
+}
+
+.service_design_photography {
+  background: url(../images/mobile/image-photography.jpg) no-repeat;
+}
+
+.service_design_graphic h2,
+.service_design_graphic p
+{
+  color: var(--dark-desaturated-cyan);
+}
+
+.service_design_photography h2,
+.service_design_photography p {
+  color: var(--dark-blue);
+}
+
+/* Botão CTA */
+.cta {
+  overflow: hidden;
+}
+
+.cta a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  color: black;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.cta a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 8px;
+  
+  width: calc(100% + 20px);
+  left: -10px;
+  border-radius: 4px;
+  bottom: 5px;
+  z-index: -1;
+}
+
+.section_01 > .cta a::after{
+  background: var(--yellow);
+  opacity: 40%;
+}
+
+.section_02 > .cta a::after{
+  background: var(--soft-red);
+  opacity: 40%;
+}
+.cta a:hover::after {
+  opacity: 100%;
+}
+
+/* Testimonials */
+.testimonials > h2 {
+  text-transform: uppercase;
+  padding: 50px 0;
+  color: var(--grayish-blue);
+  font-size: 20px;
+  letter-spacing: 0.15em;
+
+}
+.conteiner_testimonials {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p.nome {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  color: #30333A;
+  padding-bottom: 0px;
+}
+
+p.cargo {
+  color: var(--grayish-blue);
+  font-size: 14px;
+}
+
+/* rodapé */
+footer {
+  background-color: var(--dark-moderate-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.logo_footer {
+  margin-top: 50px;
+  display: block;
+  height: 20px;
+  width: 132px;
+}
+
+.logo_footer image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ul.nav_footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 45px 0 30px 0;
+  width: 80%;
+}
+ul.nav_footer > li {
+  list-style-type: none;  
+}
+
+ul.nav_footer > li > a {
+  color: var(--dark-desaturated-cyan);
+  text-decoration: none;
+}
+
+ul.social {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  gap: 24px;
+}
+
+footer .galery  {
+  width: 100%;
+  height: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.galery > div[class^="figure"] {
+  background-position: center center;
+  background-size: cover;
+  width: 50vw;
+  height: 50vw;
+} 
+
+.figure_01 {
+background: url(../images/mobile/image-gallery-milkbottles.jpg) no-repeat;
+}
+.figure_02 {
+  background: url(../images/mobile/image-gallery-orange.jpg) no-repeat;
+}
+
+.figure_03 {
+  background: url(../images/mobile/image-gallery-cone.jpg) no-repeat;
+}
+
+.figure_04 {
+  background: url(../images/mobile/image-gallery-sugar-cubes.jpg) no-repeat;
+}
+
+.attribution {
+  font-size: 13px;
+  padding: 20px 0 10px 0;
+  color: var(--dark-desaturated-cyan);
+}
+
+.attribution a {
+  color: hsl(168deg 45% 74%)
+}
