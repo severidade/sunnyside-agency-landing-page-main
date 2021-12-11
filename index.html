@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style/style.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
@@ -12,7 +12,12 @@
 <body>
   <nav>
     <h1>sunnyside</h1>
-    <ul>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    <ul class="nav-list">
       <li><a href="">About</a></li>
       <li><a href="">Services</a></li>
       <li><a href="">Projects</a></li>
@@ -22,7 +27,9 @@
   <div class="section_00 hero_section">
     <div class="hero">
       <h2>We are creatives</h2>
-      <a class="arrow-down" href="#brand"><img src="./images/arrow-down.svg" alt="arrow-down"></a>
+      <a class="arrow-down" href="#brand">
+        <!-- <img src="./images/arrow-down.svg" alt="arrow-down"> -->
+      </a>
     </div>
   </div>
   <div id="brand" class="section_01">
@@ -126,6 +133,8 @@
       Coded by <a href="https://github.com/severidade" target="_blank">Severidade</a>.
     </div>
   </footer>
-  <script src="./js/scroll.js"></script>
+  <!-- <script src="./js/scroll.js"></script> -->
+  <script src="./js/scroll2.js"></script>
+  <script src="./js/navbar.js"></script>
 </body>
 </html>
