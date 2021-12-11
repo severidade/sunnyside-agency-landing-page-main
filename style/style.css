@@ -58,7 +58,7 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   top: 0;
   z-index: 3;
@@ -84,7 +84,7 @@ nav ul {
 .section_00.hero_section {
   align-items: flex-start;
   grid-template-columns: 100%;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 div[class^="section"] {
@@ -101,7 +101,7 @@ div[class^="section"] {
 
 .section_00.hero_section {
   align-items: flex-start;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 .hero, .title, .text, .cta {
@@ -131,13 +131,28 @@ div[class^="section"] {
 
 .hero {
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero h2 {
   text-transform: uppercase;
   color: #fff;
-  font-size: 11.5vw;
+  font-size: 2rem;
   letter-spacing: 0.5vw;
+}
+.arrow-down {
+  height: 88px;
+  overflow: hidden;
+  display: block;
+  width: 50px;
+  margin-top: 30px;
+}
+.arrow-down img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Transform your brand */ 
