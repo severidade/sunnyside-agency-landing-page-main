@@ -35,12 +35,12 @@ function smoothScrollTo(endX, endY, duration) {
       clearInterval(timer);
     }
     window.scroll(newX, newY);
-  }, 1000 / 60);
+  }, 1000 / 61);
 }
 
 function scrollToId(event){
   event.preventDefault();
-  const distanceFromTheTop = getDistanceFromTheTop(event.target) - 0;
+  const distanceFromTheTop = getDistanceFromTheTop(event.target) - 60;
   // nativeScroll(distanceFromTheTop);
   smoothScrollTo(0, distanceFromTheTop, 1000);
 }
